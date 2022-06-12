@@ -9,6 +9,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
+//go:generate mockgen -destination=../mocks/service/mockTodoService.go -package=services github.com/eibrahimarisoy/go_mongo_api/services TodoService
 type DefaultTodoService struct {
 	Repo repository.TodoRepository
 }
